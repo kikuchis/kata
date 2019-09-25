@@ -23,6 +23,6 @@ class DrivePeriod {
 
 	boolean isHoliday() {
 		var startDate = startTm.toLocalDate();
-		return HolidayUtils.isHoliday(startDate) && HolidayUtils.isHoliday(startDate.plusDays(1));
+		return HolidayUtils.isHoliday(startDate) || HolidayUtils.isHoliday(startDate.plusDays(1));
 	}
 }
